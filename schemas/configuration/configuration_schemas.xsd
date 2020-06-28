@@ -292,6 +292,7 @@
           <xs:element name="PostClientFlow" type="flowBean" minOccurs="0"/>
           <xs:element name="PostFlow" type="flowBean" minOccurs="0"/>
           <xs:element name="PreFlow" type="flowBean" minOccurs="0"/>
+          <xs:element name="HTTPProxyConnection" type="httpProxyConnection" minOccurs="0"/>
           <xs:element ref="Statistics" minOccurs="0"/>
         </xs:sequence>
       </xs:extension>
@@ -1467,4 +1468,4 @@
       <xs:enumeration value="Cookie"/>
     </xs:restriction>
   </xs:simpleType>
-
+</xs:schema>

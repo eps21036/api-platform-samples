@@ -89,7 +89,7 @@
           <xs:element name="ExternalAuthorizationCode" type="xs:string" minOccurs="0"/>
           <xs:element name="ExternalRefreshToken" type="xs:string" minOccurs="0"/>
           <xs:element name="GrantType" type="xs:string" minOccurs="0"/>
-          <xs:element name="Operation" type="xs:string" nillable="true" minOccurs="0"/>
+          <xs:element name="Operation" type="xs:string" minOccurs="0"/>
           <xs:element name="PassWord" type="xs:string" minOccurs="0"/>
           <xs:element name="RedirectUri" type="xs:string" minOccurs="0"/>
           <xs:element name="RefreshToken" type="xs:string" minOccurs="0"/>

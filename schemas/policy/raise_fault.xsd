@@ -8,6 +8,7 @@
         <xs:sequence>
           <xs:element name="FaultResponse" type="faultResponse" minOccurs="0"/>
           <xs:element name="IgnoreUnresolvedVariables" type="xs:boolean"/>
+          <xs:element name="AssignVariable" type="assignVariableAction"/>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -141,7 +142,7 @@
     <xs:complexContent>
       <xs:extension base="nameValueAction">
         <xs:sequence>
-          <xs:element name="Payload" type="xs:anyType" minOccurs="0"/>
+          <xs:element name="Payload" type="payload" minOccurs="0"/>
           <xs:element name="Verb" type="xs:string" minOccurs="0"/>
           <xs:element name="Version" type="xs:string" minOccurs="0"/>
           <xs:element name="Path" type="xs:string" minOccurs="0"/>
@@ -150,5 +151,24 @@
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="assignVariableAction">
+    <xs:complexContent>
+      <xs:extension base="action">
+        <xs:sequence>
+          <xs:element name="Name" type="xs:string"/>
+          <xs:element name="Value" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="payload">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="contentType" type="xs:string"/>
+        <xs:attribute name="variablePrefix" type="xs:string"/>
+        <xs:attribute name="variableSuffix" type="xs:string"/>
+      </xs:extension>
+    </xs:simpleContent>
   </xs:complexType>
 </xs:schema>
